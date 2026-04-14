@@ -89,7 +89,14 @@ export function getAllPosts(): Post[] {
     }
   }
 
-  posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  // 날짜 내림차순. 같은 날짜면 slug 내림차순(한글 로케일)으로 결정해
+  // 동일 날짜 글이 여러 개일 때 폴더/파일 순에만 의존하지 않도록 함.
+  posts.sort((a, b) => {
+    if (a.date !== b.date) {
+      return a.date < b.date ? 1 : -1;
+    }
+    return b.slug.localeCompare(a.slug, "ko");
+  });
   return posts;
 }
 

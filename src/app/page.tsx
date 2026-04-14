@@ -11,18 +11,11 @@ export default function HomePage() {
   return (
     <div className="space-y-16 md:space-y-20">
       <section className="border-b border-[rgba(65,65,65,0.8)] pb-12 md:pb-16">
-        <p className="text-sm font-semibold uppercase tracking-[1.4px] text-silver">
-          마크다운 · 주제별 폴더 · 정적 생성
-        </p>
-        <h1 className="mt-4 max-w-4xl text-4xl font-black leading-none tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="max-w-4xl text-2xl font-black leading-none tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
           포피스의
           <span className="text-neon-volt"> 공방</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-silver md:text-xl">
-          `content/주제폴더/YYYY-MM-DD-제목.md` 형식으로 글을 두면 빌드 시 페이지로
-          올라옵니다. GitHub에 푸시하고 Vercel에 연결해 배포할 수 있습니다.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href="#topics"
             className="inline-flex items-center justify-center rounded border border-neon-volt bg-neon-volt px-4 py-2 text-base font-semibold text-[#151515] transition-colors hover:bg-[rgb(29,29,29)] hover:text-neon-volt active:text-pale-yellow"
