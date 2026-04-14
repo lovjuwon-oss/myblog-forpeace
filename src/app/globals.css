@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Design.md — ClickHouse-inspired */
+  --color-neon-volt: #faff69;
+  --color-forest: #166534;
+  --color-forest-dark: #14572f;
+  --color-pale-yellow: #f4f692;
+  --color-border-olive: #4f5100;
+  --color-olive-dark: #161600;
+  --color-pure-black: #000000;
+  --color-near-black: #141414;
+  --color-charcoal: #414141;
+  --color-deep-charcoal: #343434;
+  --color-hover-gray: #3a3a3a;
+  --color-silver: #a0a0a0;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-inconsolata), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-pure-black text-white antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Prose — dark blog body (Design.md: Inconsolata code, silver secondary) */
+.prose-blog {
+  --tw-prose-body: #a0a0a0;
+  --tw-prose-headings: #ffffff;
+  --tw-prose-lead: #a0a0a0;
+  --tw-prose-links: #faff69;
+  --tw-prose-bold: #ffffff;
+  --tw-prose-counters: #a0a0a0;
+  --tw-prose-bullets: #faff69;
+  --tw-prose-hr: rgba(65, 65, 65, 0.8);
+  --tw-prose-quotes: #a0a0a0;
+  --tw-prose-quote-borders: #faff69;
+  --tw-prose-captions: #a0a0a0;
+  --tw-prose-code: #f4f692;
+  --tw-prose-pre-code: #e5e5e5;
+  --tw-prose-pre-bg: #141414;
+  --tw-prose-th-borders: rgba(65, 65, 65, 0.8);
+  --tw-prose-td-borders: rgba(65, 65, 65, 0.5);
+  max-width: 42rem;
+}
+
+.prose-blog a:hover {
+  color: #faff69;
+  text-decoration-color: #faff69;
+}
+
+.prose-blog pre {
+  border: 1px solid rgba(65, 65, 65, 0.8);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.prose-blog code {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.prose-blog :not(pre) > code {
+  background: #141414;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  border: 1px solid rgba(65, 65, 65, 0.5);
+}
+
+.prose-blog blockquote {
+  border-left-color: #faff69;
+}
